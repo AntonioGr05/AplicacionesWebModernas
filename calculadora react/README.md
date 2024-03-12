@@ -18,6 +18,12 @@ Seguido de:
 npm run dev
 ```
 
+# Imagenes
+
+![Calculadora](../Img/CaluladoraReact01.png)
+
+![Calculadora](../Img/CaluladoraReact02.png)
+
 ## Autor
 
 Antonio Galvan Rojas
