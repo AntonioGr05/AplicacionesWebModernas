@@ -1,0 +1,15 @@
+
+.titulo {
+  color: red;
+}
+
+/* tema claro */
+.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark {
+  background-color: #282c34;
+  color: #fff;
+}
