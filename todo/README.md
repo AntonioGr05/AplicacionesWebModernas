@@ -1,8 +1,8 @@
 # Todo List
 
-En esta ocacion se realizo un TODO list con diferentes ocpiones usando hooks de react.
+En esta ocacion se realizo un TODO list con diferentes opciones utilizando diferentes hooks de react.
 
-Una ves realizado el proyecto de todo, se procedio a realizar un cambio de tema mediante un boton, utilizando el hook de useContext.
+Una ves realizado el proyecto de todoList, se procedio a realizar un cambio de tema mediante un boton, utilizando el hook de useContext.
 
 ## Project setup
 
