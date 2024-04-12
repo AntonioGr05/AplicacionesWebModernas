@@ -67,39 +67,49 @@ export default function Todo() {
               localStorage.setItem("todos", json);
           }
         }, [todos]);
+
     return (
-        <div id="todo-list" className={theme}>
-        <button onClick={toggleTheme}>Cambiar tema</button>
-        <h1 className="titulo">Todo List</h1>
-        <form onSubmit={handleSubmit}>
-            <input
-            type="text"
-            id = 'todoAdd'
-            />
-            <button type="submit">Add Todo</button>
-        </form>
-        {todos.map((todo) => (
-        <div key={todo.id} className="todo">
-            <div className="todo-text">
-            {/* Add checkbox for toggle complete */}
-            <input
-                type="checkbox"
-                id="completed"
-                checked={todo.completed}
-                onChange={() => toggleComplete(todo.id)}
-            />
-            
-            {/* if it is edit mode, display input box, else display text */}
-            {todo.id === todoEditing ?
-                (<input
-                type="text"
-                id = {todo.id}
-                defaultValue={todo.text}
-                />) :
-                (<div>{todo.text}</div>)
-            }
+        <div id="todo-list" className={`${theme} todo`}>
+          <div className="crearTask">
+            <div className="crearTaskVertical">
+              <button onClick={toggleTheme}>Cambiar tema</button>
+              <h1 className="titulo">Todo List</h1>
             </div>
-            <div className="todo-actions">
+            <div className="crearTaskHorizontal">
+              <form onSubmit={handleSubmit}>
+                  <input
+                  type="text"
+                  id = 'todoAdd'
+                  />
+                  <button type="submit">Add Todo</button>
+              </form>
+            </div>
+          </div>
+        
+        {todos.map((todo) => (
+        <div key={todo.id} className="task">
+            <div className="task-text">
+              {/* Add checkbox for toggle complete */}
+              <input
+                  type="checkbox"
+                  id="completed"
+                  checked={todo.completed}
+                  onChange={() => toggleComplete(todo.id)}
+              />
+              <div className="texto">
+                {/* if it is edit mode, display input box, else display text */}
+                {todo.id === todoEditing ?
+                    (<input
+                    type="text"
+                    id = {todo.id}
+                    defaultValue={todo.text}
+                    />) :
+                    (<div>{todo.text}</div>)
+                }
+              </div>
+              
+            </div>
+            <div className="task-actions">
             {/* if it is edit mode, allow submit edit, else allow edit */}
             {todo.id === todoEditing ?
             (
